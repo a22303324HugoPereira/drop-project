@@ -802,7 +802,6 @@ class AssignmentController(
         }
 
         assignmentService.clearAllTags(assignment, clearOrphans = true)
-        assignmentRepository.save(assignment)
 
         assignmentACLRepository.deleteByAssignmentId(assignmentId)
         assignmentReportRepository.deleteByAssignmentId(assignmentId)
